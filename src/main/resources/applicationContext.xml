@@ -14,5 +14,8 @@
         <constructor-arg ref="quizValidator"/>
     </bean>
     <bean name="quizPresenter" class="edu.otus.spring01.presenter.ConsoleQuizPresenter"/>
+    <bean name="quizRunner" class="edu.otus.spring01.runner.QuizRunnerImpl">
+        <constructor-arg ref="quizPresenter"/>
+    </bean>
 
 </beans>
