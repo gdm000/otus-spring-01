@@ -3,7 +3,7 @@ package edu.otus.spring01.validator;
 import edu.otus.spring01.domain.QuizBundle;
 
 public class QuizValidatorImpl implements QuizValidator {
-    private final int minQuestionsCount = 5;
+    public static final int minQuestionsCount = 5;
     @Override
     public void validate(QuizBundle bundle) {
         if (bundle.getQuestions().size() < minQuestionsCount) {
