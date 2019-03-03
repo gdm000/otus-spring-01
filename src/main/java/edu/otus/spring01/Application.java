@@ -1,5 +1,6 @@
 package edu.otus.spring01;
 
+import edu.otus.spring01.domain.QuizBundle;
 import edu.otus.spring01.domain.QuizResult;
 import edu.otus.spring01.runner.QuizRunner;
 import edu.otus.spring01.service.QuizService;
@@ -11,8 +12,8 @@ public class Application {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         QuizService quizService = context.getBean(QuizService.class);
         QuizRunner quizRunner = context.getBean(QuizRunner.class);
-
-        QuizResult quizResult = quizRunner.runQuiz(quizService.getQuiz());
+        QuizBundle quiz = quizService.getQuiz();
+        QuizResult quizResult = quizRunner.runQuiz(quiz);
         System.out.printf(
                 "Quiz Result for [%s %s]: Total: %d, Correct: %d",
                 quizResult.getSecName(),

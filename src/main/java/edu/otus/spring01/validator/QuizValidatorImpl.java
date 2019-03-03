@@ -10,7 +10,7 @@ public class QuizValidatorImpl implements QuizValidator {
             throw new IllegalArgumentException(String.format("Less than %d  questions", minQuestionsCount));
         }
 
-        if (bundle.getQuestions().stream().filter(q -> q.getValidOptIdx() < 0 || q.getOptions().size() < q.getValidOptIdx() + 1).count() > 0) {
+        if (bundle.getQuestions().stream().filter(q -> q.getValidOptionIndex() < 0 || q.getOptions().size() < q.getValidOptionIndex() + 1).count() > 0) {
             throw new IllegalArgumentException("Bad question options data");
         }
     }

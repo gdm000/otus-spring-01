@@ -6,12 +6,12 @@ import java.util.List;
 public class QuestionBundle {
     private final String question;
     private final List<String> options;
-    private final int validOptIdx;
+    private final int validOptionIndex;
 
-    public QuestionBundle(String question, int validOptIdx, List<String> options) {
+    public QuestionBundle(String question, int validOptionIndex, List<String> options) {
         this.question = question;
         this.options = Collections.unmodifiableList(options);
-        this.validOptIdx = validOptIdx;
+        this.validOptionIndex = validOptionIndex;
     }
 
     public String getQuestion() {
@@ -22,11 +22,7 @@ public class QuestionBundle {
         return options;
     }
 
-    public int getValidOptIdx() {
-        return validOptIdx;
-    }
-
-    public boolean isValid(int idx) {
-        return idx == validOptIdx;
+    public int getValidOptionIndex() {
+        return validOptionIndex;
     }
 }

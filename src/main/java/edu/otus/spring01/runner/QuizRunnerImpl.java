@@ -21,7 +21,7 @@ public class QuizRunnerImpl implements QuizRunner {
             presenter.present(question);
             int idx = getAnswer(question);
             result.setQuestionsTotal(result.getQuestionsTotal() + 1);
-            result.setQuestionsCorrect(result.getQuestionsCorrect() + (idx == question.getValidOptIdx() ? 1 : 0));
+            result.setQuestionsCorrect(result.getQuestionsCorrect() + (idx == question.getValidOptionIndex() ? 1 : 0));
         }
         return result;
     }
