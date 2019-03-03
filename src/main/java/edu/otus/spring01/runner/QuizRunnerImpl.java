@@ -23,6 +23,7 @@ public class QuizRunnerImpl implements QuizRunner {
             result.setQuestionsTotal(result.getQuestionsTotal() + 1);
             result.setQuestionsCorrect(result.getQuestionsCorrect() + (idx == question.getValidOptionIndex() ? 1 : 0));
         }
+        presenter.presentResult(result);
         return result;
     }
 

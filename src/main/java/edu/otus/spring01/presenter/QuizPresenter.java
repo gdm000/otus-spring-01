@@ -10,4 +10,5 @@ public interface QuizPresenter {
     void present(QuestionBundle question) throws Exception;
     void presentInputErr() throws Exception;
     int getAnswer() throws Exception;
+    void presentResult(QuizResult result);
 }
