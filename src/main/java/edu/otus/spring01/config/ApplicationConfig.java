@@ -15,6 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -22,6 +23,7 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import java.util.Locale;
 
 @Configuration
+@EnableAspectJAutoProxy
 @PropertySource("classpath:application.properties")
 public class ApplicationConfig {
 
