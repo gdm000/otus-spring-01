@@ -9,8 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 
-    @Around("execution(* edu.otus.spring01.*.*(..))")
+    @Around("execution(* edu.otus.spring01.runner.*.*(..))")
     public void logAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.printf("Before advise %s\n", joinPoint.getSignature());
+        Object result = joinPoint.proceed();
+        System.out.printf("After advice %s, result: %s\n", joinPoint.getSignature(), result);
 
     }
 
