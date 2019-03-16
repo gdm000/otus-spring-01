@@ -24,7 +24,7 @@ import java.util.Locale;
 
 @Configuration
 @EnableAspectJAutoProxy
-@PropertySource("classpath:application.properties")
+/*@PropertySource("classpath:application.properties")*/
 public class ApplicationConfig {
 
     @Bean
